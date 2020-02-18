@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-ng-data": {
+      "hosting": {
+        "portfolio": [
+          "angular-ng-data"
+        ]
+      }
+    }
+  }
+}
