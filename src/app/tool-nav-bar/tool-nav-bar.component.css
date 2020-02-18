@@ -1,0 +1,23 @@
+.toolbar {
+  background-color: darkblue;
+  color: white;
+  }
+  /*
+  .mat-sidenav-container {
+    background-color: rgb(0, 21, 141); */
+  /*
+  } */
+
+
+  .mat-sidenav{
+    background-color: darkblue;
+    font-size: large;
+  }
+
+  .mat-list-item{
+    color: white;
+  }
+
+  a {
+    color: white;
+  }
