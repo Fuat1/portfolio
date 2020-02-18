@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule } from '@angular/material';
+import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule, MatCardModule } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { ToolNavBarComponent } from './tool-nav-bar/tool-nav-bar.component';
 
@@ -24,6 +24,7 @@ import { ToolNavBarComponent } from './tool-nav-bar/tool-nav-bar.component';
     MatSidenavModule,
     MatListModule,
     MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent],
