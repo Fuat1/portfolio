@@ -1,9 +1,9 @@
 {
   "targets": {
-    "angular-ng-data": {
+    "fuat-portfolio": {
       "hosting": {
         "portfolio": [
-          "angular-ng-data"
+          "fuat-portfolio"
         ]
       }
     }
