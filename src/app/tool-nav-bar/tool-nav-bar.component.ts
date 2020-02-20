@@ -1,5 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 @Component({
   selector: 'app-tool-nav-bar',
