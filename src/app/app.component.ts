@@ -2,8 +2,6 @@ import { ResizeService } from './size-detector/resize.service';
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { SCREEN_SIZE } from './size-detector/screen-size.enum';
-import { MatSidenavModule } from '@angular/material/sidenav';
-
 
 @Component({
   selector: 'app-root',

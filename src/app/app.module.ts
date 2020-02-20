@@ -16,6 +16,9 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { SizeDetectorComponent } from './size-detector/size-detector.component';
 import { ResizeService } from './size-detector/resize.service';
 import {MatListModule} from '@angular/material/list';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatCardModule} from '@angular/material/card';
+
 
 
 @NgModule({
@@ -35,7 +38,9 @@ import {MatListModule} from '@angular/material/list';
     NgxSpinnerModule,
     MatIconModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    FlexLayoutModule,
+    MatCardModule
 
   ],
   providers: [ResizeService],

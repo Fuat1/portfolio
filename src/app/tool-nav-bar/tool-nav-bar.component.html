@@ -1,10 +1,10 @@
-<mat-toolbar class="toolbar">
+<mat-toolbar class="toolbar" >
     <button mat-icon-button>
       <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
     </button>
-    <img style="max-width:50px"  src="assets/img/fuat-logo.png">
-    <a [routerLink]="'/home'" ><h1 (click)="redirect()">Fuat Shakjiri</h1></a>
-    <div >
+    <img   style="max-width:50px"  src="assets/img/fuat-logo.png">
+    <a fxHide.xs [routerLink]="'/home'" ><h1 (click)="redirect()">Fuat Shakjiri</h1></a>
+    <div fxHide.xs >
       <a mat-button [routerLink]="'/home'"> Home</a>
       <div class="dropdown">
         <a mat-button><mat-icon>arrow_drop_down_circle</mat-icon>More Links About Me</a>
