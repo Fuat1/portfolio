@@ -1,6 +1,12 @@
+
+
 .toolbar {
-background-color: darkblue;
-color: white;
+background-color: rgb(3, 3, 37);
+color: darkgray;
+position: sticky;
+position: -webkit-sticky; /* For macOS/iOS Safari */
+top: 0; /* Sets the sticky toolbar to be on top */
+z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
 }
 
 .mat-sidenav-container {
@@ -9,14 +15,50 @@ color: white;
 
 
 .mat-sidenav{
-  background-color: darkblue;
+  background-color: rgb(3, 3, 37);
   font-size: large;
 }
 
 .mat-list-item{
-  color: white;
+  color: darkgray;
 }
 
 a {
-  color: white;
+  color: darkgray;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 22, 40, 0.938);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
 }
