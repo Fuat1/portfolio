@@ -1,5 +1,3 @@
-
-
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -18,9 +16,11 @@ import { ResizeService } from './size-detector/resize.service';
 import {MatListModule} from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatCardModule} from '@angular/material/card';
-
-
-
+import { LightboxModule } from '@ngx-gallery/lightbox';
+import { GalleryModule, GALLERY_CONFIG } from '@ngx-gallery/core';
+import 'hammerjs';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,10 +40,22 @@ import {MatCardModule} from '@angular/material/card';
     MatSidenavModule,
     MatListModule,
     FlexLayoutModule,
-    MatCardModule
-
+    MatCardModule,
+    FontAwesomeModule,
+    GalleryModule,
+    LightboxModule,
+    MDBBootstrapModule.forRoot()
   ],
-  providers: [ResizeService],
+  providers: [
+    ResizeService,
+    {
+      provide: GALLERY_CONFIG,
+      useValue: {
+        dots: true,
+        imageSize: 'cover'
+      }
+    }
+  ],
   bootstrap: [AppComponent],
   exports: [ToolNavBarComponent]
 })
