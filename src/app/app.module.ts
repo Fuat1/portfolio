@@ -1,62 +1,40 @@
-import { MatIconModule } from '@angular/material/icon';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { HomeComponent } from './home/home.component';
-import { ToolNavBarComponent } from './tool-nav-bar/tool-nav-bar.component';
-import { NgxSpinnerModule } from 'ngx-spinner';
-import { SizeDetectorComponent } from './size-detector/size-detector.component';
-import { ResizeService } from './size-detector/resize.service';
-import {MatListModule} from '@angular/material/list';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatCardModule} from '@angular/material/card';
-import { LightboxModule } from '@ngx-gallery/lightbox';
-import { GalleryModule, GALLERY_CONFIG } from '@ngx-gallery/core';
-import 'hammerjs';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { RouterModule, Routes, ExtraOptions } from '@angular/router';
+import { ProfileComponent } from './profile/profile.component';
+import { ProfileModule } from './profile/profile.module';
+import { HttpClientModule } from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: ProfileComponent
+  }
+];
+
+const config: ExtraOptions = {
+  useHash: true,
+};
+
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    ToolNavBarComponent,
-    SizeDetectorComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatButtonModule,
-    NgxSpinnerModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatListModule,
-    FlexLayoutModule,
-    MatCardModule,
-    FontAwesomeModule,
-    GalleryModule,
-    LightboxModule,
-    MDBBootstrapModule.forRoot()
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes, config),
+    ProfileModule,
+    HttpClientModule,
+    // FontAwesomeModule
   ],
-  providers: [
-    ResizeService,
-    {
-      provide: GALLERY_CONFIG,
-      useValue: {
-        dots: true,
-        imageSize: 'cover'
-      }
-    }
-  ],
-  bootstrap: [AppComponent],
-  exports: [ToolNavBarComponent]
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
