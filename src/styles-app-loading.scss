@@ -1,0 +1,9 @@
+.app-loading {
+  .logo {
+    width: 90%;
+    height: 90%;
+
+    // this way asset gets processed by webpack
+    background: url(../src/assets/img/fuat-logo.png) center center no-repeat;
+  }
+}

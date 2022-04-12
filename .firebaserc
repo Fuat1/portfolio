@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fuat-portfolio": {
+      "hosting": {
+        "portfolio": [
+          "fuat-portfolio"
+        ]
+      }
+    }
+  }
+}
