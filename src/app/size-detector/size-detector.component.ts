@@ -50,6 +50,7 @@ export class SizeDetectorComponent implements AfterViewInit {
       return isVisible;
     });
 
+    // @ts-ignore
     this.resizeSvc.onResize(currentSize.id);
 }
 }
