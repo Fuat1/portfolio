@@ -1,0 +1,37 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '06:00'
+      timezone: Europe/Skopje
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: deps
+    groups:
+      # Security fixes arrive as one PR instead of one per package.
+      security:
+        applies-to: security-updates
+        patterns: ['*']
+      # Next.js and React move together, including majors.
+      next-react:
+        patterns: [next, react, react-dom, eslint-config-next, '@types/react', '@types/react-dom']
+      # Everything else in tooling: minor and patch updates in one weekly PR. Majors stay separate for review.
+      tooling:
+        dependency-type: development
+        update-types: [minor, patch]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '06:00'
+      timezone: Europe/Skopje
+    commit-message:
+      prefix: ci
+    groups:
+      actions:
+        patterns: ['*']
