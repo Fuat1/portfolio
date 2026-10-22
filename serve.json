@@ -1,0 +1,14 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "cv.pdf",
+      "headers": [{ "key": "Content-Disposition", "value": "attachment; filename=\"Fuat-Shakjiri-CV.pdf\"" }]
+    },
+    {
+      "source": "**/opengraph-image",
+      "headers": [{ "key": "Content-Type", "value": "image/png" }]
+    }
+  ]
+}
