@@ -20,7 +20,7 @@ export function Hero() {
           </span>
           <span aria-hidden="true">/</span>
           <span>
-            {profile.location} · Remote, {profile.timezone}
+            {profile.location} · {profile.remote}
           </span>
         </p>
 

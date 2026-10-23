@@ -11,7 +11,7 @@ const sans = Instrument_Sans({ subsets: ['latin'], variable: '--font-sans-family
 const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono-family', display: 'swap' });
 
 const title = `${site.profile.name} · ${site.profile.role}`;
-const description = `${site.profile.positioning} ${site.profile.availability}. ${site.profile.location}, remote (${site.profile.timezone}).`;
+const description = `${site.profile.positioning} ${site.profile.availability}. ${site.profile.location} · ${site.profile.remote}.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),

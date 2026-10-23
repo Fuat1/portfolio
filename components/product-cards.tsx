@@ -1,5 +1,6 @@
 import type { Product } from '@/content/schema';
 import { site } from '@/lib/content';
+import { ExternalLink } from './external-link';
 import { ArrowUpRight } from './icons';
 
 const statusLabel: Record<Product['status'], string> = {
@@ -27,10 +28,10 @@ export function ProductCards() {
             </ul>
           ) : null}
           {product.href ? (
-            <a href={product.href} className="mt-6 inline-flex items-center gap-1.5 self-start underline underline-offset-4">
+            <ExternalLink href={product.href} className="mt-6 inline-flex items-center gap-1.5 self-start underline underline-offset-4">
               {new URL(product.href).hostname}
               <ArrowUpRight />
-            </a>
+            </ExternalLink>
           ) : null}
         </li>
       ))}

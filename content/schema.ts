@@ -100,7 +100,8 @@ export const siteSchema = z.object({
     positioning: text,
     summary: text,
     location: text,
-    timezone: text,
+    /** Where and when you work, e.g. "Remote, any time zone". */
+    remote: text,
     availability: text,
     email: z.email(),
     linkedin: httpsUrl,

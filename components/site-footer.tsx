@@ -1,4 +1,5 @@
 import { site } from '@/lib/content';
+import { ExternalLink } from './external-link';
 
 export function SiteFooter() {
   return (
@@ -9,9 +10,9 @@ export function SiteFooter() {
         </p>
         <p className="font-mono text-xs">
           Next.js · static export · Firebase Hosting ·{' '}
-          <a href="https://github.com/Fuat1/portfolio" className="underline decoration-line underline-offset-4 hover:text-fg hover:decoration-accent">
+          <ExternalLink href="https://github.com/Fuat1/portfolio" className="underline decoration-line underline-offset-4 hover:text-fg hover:decoration-accent">
             source
-          </a>
+          </ExternalLink>
         </p>
       </div>
     </footer>

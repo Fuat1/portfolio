@@ -1,4 +1,5 @@
 import { site } from '@/lib/content';
+import { ExternalLink } from './external-link';
 import { ArrowUpRight, LinkedIn, Mail } from './icons';
 
 const row =
@@ -13,7 +14,7 @@ export function ContactSection() {
           Hiring, or need a contractor? Let’s talk.
         </p>
         <p className="mt-5 max-w-xl text-muted">
-          {profile.availability}. {profile.location}, working remotely on {profile.timezone}.
+          {profile.availability}. {profile.location} · {profile.remote}.
         </p>
       </div>
       <ul className="flex flex-col gap-3">
@@ -27,13 +28,13 @@ export function ContactSection() {
           </a>
         </li>
         <li>
-          <a href={profile.linkedin} className={`${row} border border-line hover:border-fg`}>
+          <ExternalLink href={profile.linkedin} className={`${row} border border-line hover:border-fg`}>
             <span className="flex items-center gap-3">
               <LinkedIn className="shrink-0" />
               LinkedIn
             </span>
             <ArrowUpRight className="shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
+          </ExternalLink>
         </li>
       </ul>
     </div>
