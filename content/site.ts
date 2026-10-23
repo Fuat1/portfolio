@@ -18,7 +18,7 @@ export const site: Site = {
     summary:
       'Seven years of experience building for European clients, as an employee and as a contractor. I build multi-provider APIs, payment flows and AI features, and ship them with rehearsed deploys and tested rollbacks. Since 2020 I’ve worked on web apps, websites and e-commerce for Laigo, a German AI company, including three years in its Skopje office. I also co-founded StrongEsim, an eSIM platform.',
     location: 'North Macedonia',
-    timezone: 'CET',
+    remote: 'Remote, any time zone',
     availability: 'Open to B2B contracts and employment',
     email: 'fuat.shakjiri@gmail.com',
     linkedin: 'https://www.linkedin.com/in/fuat-shakjiri/',

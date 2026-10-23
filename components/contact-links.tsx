@@ -1,4 +1,5 @@
 import { site } from '@/lib/content';
+import { ExternalLink } from './external-link';
 import { Download, GitHub, LinkedIn, Mail } from './icons';
 
 const base =
@@ -18,16 +19,16 @@ export function ContactLinks({ className = '' }: { className?: string }) {
         </a>
       </li>
       <li>
-        <a href={profile.linkedin} className={secondary}>
+        <ExternalLink href={profile.linkedin} className={secondary}>
           <LinkedIn />
           LinkedIn
-        </a>
+        </ExternalLink>
       </li>
       <li>
-        <a href={profile.github} className={secondary}>
+        <ExternalLink href={profile.github} className={secondary}>
           <GitHub />
           GitHub
-        </a>
+        </ExternalLink>
       </li>
       <li>
         <a href={profile.cv.href} download={profile.cv.fileName} className={secondary}>

@@ -8,7 +8,7 @@ export const contentType = 'image/png';
 
 export default function OpenGraphImage() {
   return ogCard({
-    eyebrow: `${site.profile.availability} · ${site.profile.location}, remote (${site.profile.timezone})`,
+    eyebrow: `${site.profile.availability} · ${site.profile.remote}`,
     title: site.profile.name,
     subtitle: site.profile.positioning,
   });

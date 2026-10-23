@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ContactLinks } from '@/components/contact-links';
 import { Diagram } from '@/components/diagram';
+import { ExternalLink } from '@/components/external-link';
 import { ArrowLeft, ArrowRight, ArrowUpRight } from '@/components/icons';
 import { getAdjacentProjects, getProject, site } from '@/lib/content';
 
@@ -83,10 +84,10 @@ export default async function ProjectPage({ params }: Props) {
                   <ul>
                     {project.links.map((link) => (
                       <li key={link.href}>
-                        <a href={link.href} className="inline-flex items-center gap-1.5 underline decoration-line underline-offset-4 hover:decoration-accent">
+                        <ExternalLink href={link.href} className="inline-flex items-center gap-1.5 underline decoration-line underline-offset-4 hover:decoration-accent">
                           {link.label}
                           <ArrowUpRight />
-                        </a>
+                        </ExternalLink>
                       </li>
                     ))}
                   </ul>

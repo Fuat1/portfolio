@@ -8,6 +8,10 @@ updates:
       time: '06:00'
       timezone: Europe/Skopje
     open-pull-requests-limit: 5
+    ignore:
+      # Keep the Node.js types on the runtime's major version (.nvmrc).
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
     commit-message:
       prefix: deps
     groups:

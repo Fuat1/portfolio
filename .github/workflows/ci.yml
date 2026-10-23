@@ -46,8 +46,11 @@ jobs:
 
   deploy-preview:
     name: Deploy preview channel
-    # Forks have no access to the deploy secret.
-    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    # Forks and Dependabot PRs get no secrets, so they skip the preview (build and tests still run).
+    if: >-
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.user.login != 'dependabot[bot]'
     needs: build-and-test
     runs-on: ubuntu-latest
     permissions:

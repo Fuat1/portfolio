@@ -81,6 +81,19 @@ test('prefetching and client-side navigation cause no failed requests or console
   expect(failures).toEqual([]);
 });
 
+test('links to other sites open in a new tab', async ({ page }) => {
+  for (const path of ['/', '/projects/tracemind']) {
+    await page.goto(path);
+    const external = page.locator('a[href^="http"]');
+    const count = await external.count();
+    expect(count, path).toBeGreaterThan(0);
+    for (let i = 0; i < count; i++) {
+      await expect(external.nth(i)).toHaveAttribute('target', '_blank');
+      await expect(external.nth(i)).toHaveAttribute('rel', /noopener/);
+    }
+  }
+});
+
 test('unknown pages return 404', async ({ page }) => {
   const response = await page.goto('/does-not-exist');
   expect(response?.status()).toBe(404);
